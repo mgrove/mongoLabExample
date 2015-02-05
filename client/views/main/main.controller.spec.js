@@ -20,4 +20,7 @@ describe('Testing controller: mainCtrl', function(){
         expect(true).toEqual(true);
     });
 
+    it('test for heaviestPet function', function(){
+        expect(scope.data.heaviestPet().toEqual("cat,2"))
+    })
 });
