@@ -52,7 +52,7 @@ app.get('/*', function(req, res){
 
 app.get('/gpaCalc', function(req, res){
     res.sendFile('gpaCalc.html', options);
-})
+});
 
 // Wildcard catches requests for non-existing routes or files and responds with a 404 html page
 app.get('*', function(req, res){
