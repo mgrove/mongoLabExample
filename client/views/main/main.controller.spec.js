@@ -25,7 +25,7 @@ describe('Testing controller: mainCtrl', function(){
             {text: "cat", number:2},
             {text: "dog", number:1}
         ]
-        expect(scope.heaviestPet()).toEqual("cat 2 :");
+        expect(scope.heaviestPet()).toEqual("cat 2");
     })
 
     it('test for no data', function(){

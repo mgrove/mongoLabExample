@@ -42,17 +42,6 @@ angular.module("appModule")
             return $scope.data.length;
         };
 
-//        $scope.heaviestPet = function(){
-//            for(var i=0;i < data.length;i++){
-//                var temp = 0;
-//                temp = data[0];
-//                if(data[i].number > temp.number){
-//                    temp = data[i];
-//                }
-//                return temp.text + "is: " +temp.number;
-//            }
-//        }
-
         $scope.heaviestPet = function(){
             if($scope.data.length == 0){
                 return "No Data";
@@ -65,7 +54,7 @@ angular.module("appModule")
                         petName = item.text;
                     }
                 });
-                return petName+" "+largestPet + " :";
+                return petName+" "+largestPet;
             }
         }
 
