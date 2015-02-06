@@ -7,7 +7,9 @@ var mongoose = require('mongoose');
 
 var Pet = mongoose.model('Pet', {
     text: String,
-    number: Number
+    number: Number,
+    grade: String,
+    credits: Number
 });
 
 // Defining Routes
