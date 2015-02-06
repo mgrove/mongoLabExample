@@ -1,6 +1,3 @@
-/**
- * Created by lemke164 on 2/6/15.
- */
 'use strict';
 
 console.log("gpaCalc.js loaded!");

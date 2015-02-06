@@ -1,5 +1,23 @@
-
 <div ng-include="'components/navbar/navbar.html'"></div>
 
+<img src="assets/images/puppies.jpg">
+
 <hr>
-<h1>This is a "gpa Page" page!</h1>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">
+
+            <form ng-submit="addData()">
+                <input ng-model="textField" type="text" size="50" placeholder="add a new item to the list!">
+                <input ng-model="weightField" type="number" size="50" placeholder="weight">
+                <input type="submit" value="submit" class="btn btn-primary">
+                <span class="floatRight">Items in this list: {{itemsInList()}}</span>
+                <br>
+                <span class="floatRight">Heaviest pet: {{heaviestPet()}}</span>
+
+            </form>
+            <br>
+        </li>
+        <li class="list-group-item" ng-repeat="test in data">{{test.text}}, {{test.number}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="removeData($index)"></span></li>
+    </ul>
+</div>
