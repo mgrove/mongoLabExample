@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('appModule')
-    .controller('gpaCtrl', function($scope){
+    .controller('gpaCtrl', function($scope, $http){
       console.log("gpaCalc.js loaded!");
 
         $scope.data1 = [];
@@ -21,7 +21,7 @@ angular.module('appModule')
                     $scope.getGPA();
                 });
                 $scope.gradeField = "";
-                $scope.creditField = 0;
+                $scope.creditField = "";
             }
         };
 
@@ -31,7 +31,7 @@ angular.module('appModule')
             });
         };
 
-        $scope.itemsInList = function(){
+        $scope.itemsInGradeList = function(){
             return $scope.data1.length;
         };
 
@@ -57,14 +57,14 @@ angular.module('appModule')
             var GPA = 0;
             var numerator = 0;
             var denominator = 0;
-            for (var i=0; i < $scope.data.length; i++){
-                var tempGrade = $scope.gradeNumber($scope.data[i].text);
-                numerator = numerator + (tempGrade * $scope.data[i].number);
-                denominator = (denominator + parseInt($scope.data[i].number));
+            for (var i=0; i < $scope.data1.length; i++){
+                var tempGrade = $scope.gradeNumber($scope.data1[i].grade);
+                numerator = numerator + (tempGrade * $scope.data1[i].credits);
+                denominator = (denominator + parseInt($scope.data1[i].credits));
             }
             GPA = (numerator / denominator);
 
-            if($scope.data.length == 0){
+            if($scope.data1.length == 0){
                 return "  No Data Added";
             }
             else{

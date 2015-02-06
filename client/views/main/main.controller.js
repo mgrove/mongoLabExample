@@ -38,7 +38,7 @@ angular.module("appModule")
             return str1 + str2;
         };
 
-        $scope.itemsInGradeList = function(){
+        $scope.itemsInList = function(){
             return $scope.data.length;
         };
 
