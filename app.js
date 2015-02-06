@@ -50,6 +50,7 @@ app.get('/*', function(req, res){
     res.sendFile('index.html', options);
 });
 
+
 // Wildcard catches requests for non-existing routes or files and responds with a 404 html page
 app.get('*', function(req, res){
     //res.send("404");
