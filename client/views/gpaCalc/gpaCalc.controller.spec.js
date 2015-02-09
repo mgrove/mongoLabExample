@@ -21,14 +21,15 @@ describe('Testing controller: gpaCtrl', function() {
 
     it('should return a number', function () {
         expect(scope.gradeNumber("A")).toEqual(4);
-    })
+    });
 
     it('should return correct GPA', function () {
         scope.data1 = [
         {grade: "A", credits: 4}
-    ]
-        expect(scope.data1.totalGPA()).toEqual(4);
+    ];
+        expect(scope.totalGPA()).toEqual(4);
+
     })
 
 
-})
+});
